@@ -1,103 +1,228 @@
+'use client';
 import Image from "next/image";
+import Link from "next/link";
+import Corkboard from "@/components/Corkboard";
+import CorkCard from "@/components/Corkcard";
+import LeafBorder from "@/components/Leafborder";
+import Polaroid from "@/components/Polaroid";
+import SectionHeader from "@/components/SectionHeader";
 
 export default function Home() {
+  
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <LeafBorder 
+        leafSize={170}
+        leafSpacing={150}
+      />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="relative z-[1] min-h-screen flex items-start justify-center py-32 px-4 w-full">        
+        <Corkboard
+        
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          
+          <div className="p-4">
+            {/* Header image spanning the width */}
+            <div className="mb-6">
+              <Image 
+                src="/images/header.png" 
+                alt="Cool Beans Davis Header" 
+                width={768}
+                height={200}
+                className="w-full h-auto object-contain"
+              />
+            </div>
+            
+            {/* SECTION 1: COMMUNITY */}
+            <div className="mb-12">
+              <SectionHeader
+                id="community-header"
+                text="COMMUNITY"
+                paperColor="yellow-50"
+                ruled="none"
+                pinStyle="none"
+                className="transform -rotate-0.5"
+              />
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-8">
+           
+                <CorkCard
+                  id="welcome-card"
+                  title="Who are We?"
+                  paperColor="yellow-50"
+                  ruled="none"
+                  pinPlacement="both"
+                  className="transform -rotate-2"
+                >
+                  <p className="text-m">
+                    Davis&apos;s Vegan + Plant Based Alliance!
+                  </p>
+                  <p className="text-m underline text-blue-800">
+                    <Link href="/FAQ">Questions? Check out our FAQ Page →</Link>
+                  </p>
+
+                  <p className="text-xs mt-2 opacity-75">
+                    Est. Sep 2025 !
+                  </p>
+                </CorkCard>
+
+                <CorkCard
+                  id="why-veggie-card"
+                  title="Why Go Vegan in 2025?"
+                  paperColor="blue-50"
+                  ruled="grid"
+                  pinPlacement="right"
+                  className="transform rotate-2"
+                  linkTo="/why"
+                >
+                  <div className="text-sm space-y-1">
+                    <p> Your Health →</p>
+                    <p> Our Environment →</p>
+                    <p> The Animals ! →</p>
+                  </div>
+                </CorkCard>
+
+           
+
+                <div className="flex justify-center">
+                  <Polaroid
+                    id="cow-polaroid-1"
+                    imageSrc="/images/polaroids/cow_3.jpg"
+                    imageAlt="Cute cow"
+                    caption="Moo! (click me!)"
+                    rotation={-5}
+                    size={200}
+                    vintageIntensity={0.4}
+                    linkTo="https://www.instagram.com/thegentlebarn/?hl=en"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* SECTION 2: FOOD */}
+            <div className="mb-12">
+              <SectionHeader
+                id="food-header"
+                text="PLANT-BASED FOOD"
+                paperColor="green-50"
+                ruled="grid"
+                pinStyle="metal"
+                className="transform rotate-1"
+              />
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-8">
+
+
+                <CorkCard
+                  id="recipes-card"
+                  title="Our Favorite Recipes"
+                  paperColor="green-50"
+                  ruled="grid"
+                  pinPlacement="right"
+                  className="transform rotate-2"
+                  linkTo="/recipes"
+                >
+                  <div className="text-sm space-y-1">
+                    <p> Youtube Channels →</p>
+                    <p> Written Recipes →</p>
+                    <p> Cookbooks →</p>
+                  </div>
+                </CorkCard>
+
+             
+                <div className="flex justify-center">
+                  <Polaroid
+                    id="cow-polaroid-3"
+                    imageSrc="/images/polaroids/pig_1.jpg"
+                    imageAlt="Cute pig"
+                    caption="Oink! (click me!)"
+                    rotation={-2}
+                    size={200}
+                    vintageIntensity={0.4}
+                    linkTo="https://www.instagram.com/lovingfarmanimalsanctuary/?hl=en"
+                  />
+                </div>
+
+                <CorkCard
+                  id="restaurants-card"
+                  title="Our Favorite Davis Restaurants!"
+                  paperColor="yellow-50"
+                  ruled="college"
+                  pinPlacement="right"
+                  className="transform -rotate-1"
+                >
+                  <div className="text-sm space-y-1">
+                    <p>• Indian →</p>
+                    <p>• Asian →</p>
+                    <p>• American →</p>
+                  </div>
+                </CorkCard>
+              </div>
+            </div>
+
+            {/* SECTION 3: EVENTS */}
+            <div className="mb-12">
+              <SectionHeader
+                id="events-header"
+                text="LOCAL EVENTS"
+                paperColor="blue-50"
+                ruled="college"
+                pinStyle="plastic"
+                className="transform -rotate-1"
+              />
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-8">
+
+         
+
+                <div className="flex justify-center">
+                  <Polaroid
+                    id="cow-polaroid-2"
+                    imageSrc="/images/polaroids/cow_2.jpg"
+                    imageAlt="Cute cow"
+                    caption="Moo! (click me!)"
+                    rotation={0}
+                    size={200}
+                    vintageIntensity={0.4}
+                    linkTo="https://www.instagram.com/cowscomehomesanctuary/?hl=en"
+                  />
+                </div>
+
+              <CorkCard
+                  id="bean-count-card"
+                  title="Bean Count Contest"
+                  paperColor="yellow-50"
+                  ruled="college"
+                  pinPlacement="right"
+                  className="transform rotate-1"
+                >
+                  <div className="text-sm space-y-1">
+                    <p> Come by our booth at the farmers market to make your guess and win a prize (if you&apos;re lucky)</p>
+                  </div>
+                </CorkCard>
+                
+                <CorkCard
+                  id="todo-card"
+                  title="TODO LIST"
+                  paperColor="blue-50"
+                  ruled="grid"
+                  pinPlacement="left"
+                  className="transform -rotate-1"
+                >
+                  <ul className="text-sm space-y-1">
+                    <li> ☑ Make Website</li>
+                    <li> ☐ Plan Potluck??</li>
+                    <li> ☑ Make a whatsapp / discord group</li>
+                    <li> ☐ Farmers Market Booth Signup</li>
+                  </ul>
+                </CorkCard>
+
+              </div>
+
+            </div>
+          </div>
+        </Corkboard>
+      </div>
+    </>
   );
 }
