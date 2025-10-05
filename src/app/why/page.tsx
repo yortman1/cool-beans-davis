@@ -85,9 +85,7 @@ export default function Home() {
 
               <div className="mt-16">
                 <InfoCard
-                  id="Cardiovascular-benefits"
-                  expandable={true}
-                  title="Cardiovascular Benefits"
+                  id="Cardiovascular-benefits"                  title="Cardiovascular Benefits"
                   text="Sadly, Heart disease and stroke are the leading causes of death in America. A big reason is plaque building up in arteries, which slows or blocks blood from getting where it needs to. Plant-based diets are naturally very low in &quot;bad&quot; LDL cholesterol and contain almost no trans fats. There's now very strong evidence that eating more plants improves your heart health[1] and significantly cuts your risk of heart attack and stroke[2]. For men, plant based diets may improve circulation enough to prevent or reverse ED[3]."
                   imageSrc="/images/info/beets.webp"
                   imagePosition="left"
@@ -109,7 +107,6 @@ export default function Home() {
               <div className="mt-8">
                 <InfoCard
                   id="lowered-cancer-risk"
-                  expandable={true}
                   title="Lowered Cancer Risk"
                   text=" There is growing evidence that eating a plant-based diet reduces the risk of cancer[1]. The World Health Organization has recognized processed meat as a Group 1 carcinogen, and red meat a Group 2A carcinogen sinc 2015[2]. Plant-based foods are rich with natural compounds like antioxidants and fiber that help protect DNA from damage and lower inflammation. 
                   Recently, a study of 95,863 people showed vegans had a 24% lower risk across all cancer types[3]."
@@ -133,20 +130,23 @@ export default function Home() {
               <div className="mt-8">
                 <InfoCard
                   id="athletics"
-                  expandable={true}
-                  title="Athletic Performance"
-                  text="So far, research hasn’t found big advantages or disadvantages of a vegan diet for athletic performance[1]. Studies show that if your body is getting the nutrients it needs, it doesn’t really matter whether they come from plants or animals. One area where plant-based eating CAN make a big difference is maintaining a healthy weight[2]. And if you’ve heard the myth that you can’t build muscle without meat, think again. Many Olypians are vegan[3], and Patrik Baboumian holds the Guinness World Record for the yoke walk, lifting 1,224 lb over 10 meters[4]."
+                  title="Overall Health & Athletics"
+                  text="According to the American Dietetic Association(ADA), well-planned vegan diets are healthful and nutritionally adequate for all stages of life, from infant to elderly, as well as for athletes[1]. But you still might be wondering if going vegan will affect your performance. So far, research hasn’t found big advantages or disadvantages of a vegan diet for athletic performance[2]. Studies show that if your body is getting the nutrients it needs, it doesn’t really matter whether they come from plants or animals. One area where plant-based eating CAN make a big difference is maintaining a healthy weight[3]. And if you’ve heard the myth that you can’t build muscle without meat, think again. Many Olypians are vegan[4], and Patrik Baboumian holds the Guinness World Record for the yoke walk, lifting 1,224 lb over 10 meters[5]."
 
                   imageSrc="/images/info/strongman.jpeg"
                   imagePosition="left"
                   sources={[
-                    { text:"[1] The Impact of Vegan and Vegetarian Diets on Physical Performance and Molecular Signaling in Skeletal Muscle", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8623732/"},
 
-                    { text:"[2] Effects of Plant-Based Diets on Weight Status: A Systematic Review", url: "https://www.tandfonline.com/doi/full/10.2147/DMSO.S272802#d1e175"},
+                    {text:"[1] Position of the American Dietetic Association: vegetarian diets", url: "https://pubmed.ncbi.nlm.nih.gov/19562864/"},
 
-                    { text: "[3] Vegan Olypians compete in Paris 2024", url: "https://www.greenqueen.com.hk/vegan-athletes-plant-based-olympics-paris-2024/" },
+                    
+                    {text:"[2] The Impact of Vegan and Vegetarian Diets on Physical Performance and Molecular Signaling in Skeletal Muscle", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8623732/"},
 
-                    { text: "[4] Patrik Baboumian: Vegan Strongman", url:"https://www.greatveganathletes.com/patrik-baboumian-vegan-strongman/" },
+                    { text:"[3] Effects of Plant-Based Diets on Weight Status: A Systematic Review", url: "https://www.tandfonline.com/doi/full/10.2147/DMSO.S272802#d1e175"},
+
+                    { text: "[4] Vegan Olypians compete in Paris 2024", url: "https://www.greenqueen.com.hk/vegan-athletes-plant-based-olympics-paris-2024/" },
+
+                    { text: "[5] Patrik Baboumian: Vegan Strongman", url:"https://www.greatveganathletes.com/patrik-baboumian-vegan-strongman/" },
                   
                   ]}
                   paperColor="green-50"
@@ -221,7 +221,6 @@ export default function Home() {
               <div className="mt-16">
                 <InfoCard
                   id="climate-change-emissions"
-                  expandable={true}
                   title="Climage Change & Emissions"
                   text=""
                   imageSrc="/images/info/landuse.avif"
@@ -240,7 +239,6 @@ export default function Home() {
               <div className="mt-8">
                 <InfoCard
                   id="land-use-impact"
-                  expandable={true}
                   title="Agricultural Land Use Impact"
 
                   text="Switching from a typical American diet to a plant-based diet decreases the need for agricultural land use by 75% [1]. This has huge effect not only on cutting methane and agricultural emissions, but also carbon sequestration by re-wilding and reforestation.
@@ -269,7 +267,6 @@ export default function Home() {
             <div className="mt-8">
                 <InfoCard
                   id="Runoff-and-Eutrophication"
-                  expandable={true}
                   title="Runoff & Eutrophication"
                   text="Concentrated Animal Feeding Oprations (CAFOs) pack huge amounts of animals like cows, pigs, and chickens into small spaces. Not only is this a risk factor for zoonotic diseases[1], but it inevitably creates huge amounds of waste, which infiltrates into the groundwater we drink from. Nitrates, antibiotics, and heavy metals in runoff are a risk to human health[2], and near the coast, eutrophication causes ocean dead zones and destroys marine ecosystems[3]."
                   imageSrc="/images/info/cafo.webp"
@@ -336,7 +333,6 @@ export default function Home() {
             <div className="mt-0">
                 <InfoCard
                   id="animal-ag"
-                  expandable={true}
                   title="Industrial Agriculture is Unimaginably Cruel"
                   text="99% of meat in america comes from factory farms[1]. Packages and adverts will depict happy animals grazing in lush pastures, but that's simply not true. The reality of industrial-scale animal farming is one of unimaginable cruelty[2], and 'Ag-gag' laws make it nearly impossible to enforce animal rights laws that are already on the books[3]. If you can stomach it, watch Dominion to see the reality of what happens even in farms that are certified as &apos;humane.&apos;"
 
@@ -360,7 +356,6 @@ export default function Home() {
               <div className="mt-8">
                 <InfoCard
                   id="slaughterhouse-work"
-                  expandable={true}
                   title="Slaughterhouses are a nightmare for workers, too"
                   text="The dangerous and unpleasant of animal slaughter and processing is disproportionately done by undocumented immigrants, who have little recourse when they are abused by their employers[1]. Slaughterhouse work takes an immense toll on the mind and body: Physical Injuries are both disturbingly common and severe, and workers in the industry report high rates of alcoholism and PTSD[2]. On the poultry line, workers are often forced to wearing diapers because they are denied bathroom breaks[3]."
                   imageSrc="/images/info/workers.jpg"
@@ -381,7 +376,6 @@ export default function Home() {
               <div className="mt-8 mb-8">
                 <InfoCard
                   id="animal ethics"
-                  expandable={true}
                   title="All Animals Deserve Ethical Consideration"
                   text="Farmed animals are just as smart and social as the ones we love as pets, and deserve to live without being abused, just like they do.
 
